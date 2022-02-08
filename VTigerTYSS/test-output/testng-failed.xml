@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.crm.baseClass.Listener"/>
+    <listener class-name="com.crm.baseClass.AnnotationsTransformer"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Lead.TL_01NavigateToLeadPageTest">
+        <methods>
+          <include name="logout"/>
+          <include name="createLead"/>
+          <include name="login"/>
+          <include name="browserClose"/>
+          <include name="browserOpen"/>
+        </methods>
+      </class> <!-- Lead.TL_01NavigateToLeadPageTest -->
+      <class name="Lead.TL_02CreateNewLeadbByfillAllTheFieldsAndSaveTest">
+        <methods>
+          <include name="createNewLeadbByfillAllTheFieldsAndSave"/>
+          <include name="logout"/>
+          <include name="login"/>
+          <include name="browserClose"/>
+          <include name="browserOpen"/>
+        </methods>
+      </class> <!-- Lead.TL_02CreateNewLeadbByfillAllTheFieldsAndSaveTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
